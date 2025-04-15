@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_90fd5516358798fff5d26466ff41331f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_90fd5516358798fff5d26466ff41331f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_90fd5516358798fff5d26466ff41331f = L.map(
+                "map_90fd5516358798fff5d26466ff41331f",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b35e9751bbae5386fa319a258d661d6c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b35e9751bbae5386fa319a258d661d6c.addTo(map_90fd5516358798fff5d26466ff41331f);
+        
+    
+            var marker_cluster_dbd3b6b86729511a69f6470a68fc8de3 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var marker_34ae53c6d56bbf10817501f6cf9891cc = L.marker(
+                [12.8628, 30.2176],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_a3dba2b7416d4bbbb5192903116ad071 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e457eee2d1cd94117ecef06c3f65e232 = $(`<div id="html_e457eee2d1cd94117ecef06c3f65e232" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Abaker et al., (2016)<br><b>Location:</b> Sudan<br><br>         <b>AFS:</b> Parkland<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.27 Mg/ha/yr<br>         <b>BLG:</b> 0.13 Mg/ha/yr<br>         <b>Tree Density:</b> 117.0 /ha<br>         <hr>                  <b>AFS:</b> Parkland<br>         <b>Age:</b> 24.0 yrs<br>         <b>ABG:</b> 0.22 Mg/ha/yr<br>         <b>BLG:</b> 0.1 Mg/ha/yr<br>         <b>Tree Density:</b> 167.0 /ha<br>         <hr>                  <b>AFS:</b> Parkland<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 0.79 Mg/ha/yr<br>         <b>BLG:</b> 0.38 Mg/ha/yr<br>         <b>Tree Density:</b> 327.0 /ha<br>         <hr>                  <b>AFS:</b> Parkland<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.36 Mg/ha/yr<br>         <b>BLG:</b> 0.17 Mg/ha/yr<br>         <b>Tree Density:</b> 177.0 /ha<br>         <hr>                  <b>AFS:</b> Parkland<br>         <b>Age:</b> 20.0 yrs<br>         <b>ABG:</b> 0.34 Mg/ha/yr<br>         <b>BLG:</b> 0.17 Mg/ha/yr<br>         <b>Tree Density:</b> 203.0 /ha<br>         <hr>         </div>`)[0];
+                popup_a3dba2b7416d4bbbb5192903116ad071.setContent(html_e457eee2d1cd94117ecef06c3f65e232);
+            
+        
+
+        marker_34ae53c6d56bbf10817501f6cf9891cc.bindPopup(popup_a3dba2b7416d4bbbb5192903116ad071)
+        ;
+
+        
+    
+    
+            marker_34ae53c6d56bbf10817501f6cf9891cc.bindTooltip(
+                `<div>
+                     Abaker et al., (2016), Sudan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_8eebc83512ae315ea249adfdfb650ae7 = L.marker(
+                [9.6000359, 7.9999721],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_f56690ac4907f0e81c88a86e2d5717a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_a27e8ac95786439d30d2d4646641b18c = $(`<div id="html_a27e8ac95786439d30d2d4646641b18c" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Adesina et al., (1999)<br><b>Location:</b> Nigeria<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 4.59 Mg/ha/yr<br>         <b>BLG:</b> 1.1 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 6.76 Mg/ha/yr<br>         <b>BLG:</b> 1.62 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 6.75 Mg/ha/yr<br>         <b>BLG:</b> 1.62 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 30.0 yrs<br>         <b>ABG:</b> 1.35 Mg/ha/yr<br>         <b>BLG:</b> 0.32 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 40.0 yrs<br>         <b>ABG:</b> 6.02 Mg/ha/yr<br>         <b>BLG:</b> 1.44 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_f56690ac4907f0e81c88a86e2d5717a6.setContent(html_a27e8ac95786439d30d2d4646641b18c);
+            
+        
+
+        marker_8eebc83512ae315ea249adfdfb650ae7.bindPopup(popup_f56690ac4907f0e81c88a86e2d5717a6)
+        ;
+
+        
+    
+    
+            marker_8eebc83512ae315ea249adfdfb650ae7.bindTooltip(
+                `<div>
+                     Adesina et al., (1999), Nigeria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_004ac3751ec58b6c1108371b9241b822 = L.marker(
+                [9.5293472, 2.2584408],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_9371ee0ec5298e53b452788336157581 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_10e5741c6d0fa76a4fd5ea6d9600507f = $(`<div id="html_10e5741c6d0fa76a4fd5ea6d9600507f" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Aihou et al., (1999)<br><b>Location:</b> Benin<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 3.85 Mg/ha/yr<br>         <b>BLG:</b> 0.92 Mg/ha/yr<br>         <b>Tree Density:</b> 10000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 4.7 Mg/ha/yr<br>         <b>BLG:</b> 1.13 Mg/ha/yr<br>         <b>Tree Density:</b> 10000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 3.06 Mg/ha/yr<br>         <b>BLG:</b> 0.73 Mg/ha/yr<br>         <b>Tree Density:</b> 10000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 0.94 Mg/ha/yr<br>         <b>BLG:</b> 0.23 Mg/ha/yr<br>         <b>Tree Density:</b> 10000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 6.58 Mg/ha/yr<br>         <b>BLG:</b> 1.58 Mg/ha/yr<br>         <b>Tree Density:</b> 10000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.91 Mg/ha/yr<br>         <b>BLG:</b> 0.7 Mg/ha/yr<br>         <b>Tree Density:</b> 10000.0 /ha<br>         <hr>         </div>`)[0];
+                popup_9371ee0ec5298e53b452788336157581.setContent(html_10e5741c6d0fa76a4fd5ea6d9600507f);
+            
+        
+
+        marker_004ac3751ec58b6c1108371b9241b822.bindPopup(popup_9371ee0ec5298e53b452788336157581)
+        ;
+
+        
+    
+    
+            marker_004ac3751ec58b6c1108371b9241b822.bindTooltip(
+                `<div>
+                     Aihou et al., (1999), Benin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ad9c654b12499afdcd48d876a30e59ef = L.marker(
+                [1.4419683, 38.4313975],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_c3e31efe777b5ecedfe4354f2dfb8286 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d878654f64ca6fb7450b1346949629ef = $(`<div id="html_d878654f64ca6fb7450b1346949629ef" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Albrecht and Kandji (2003)<br><b>Location:</b> Kenya<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.0 yrs<br>         <b>ABG:</b> 4.0 Mg/ha/yr<br>         <b>BLG:</b> 1.27 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.0 yrs<br>         <b>ABG:</b> 9.87 Mg/ha/yr<br>         <b>BLG:</b> 3.29 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.0 yrs<br>         <b>ABG:</b> 4.0 Mg/ha/yr<br>         <b>BLG:</b> 1.83 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.0 yrs<br>         <b>ABG:</b> 3.29 Mg/ha/yr<br>         <b>BLG:</b> 2.26 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.0 yrs<br>         <b>ABG:</b> 6.67 Mg/ha/yr<br>         <b>BLG:</b> 3.43 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.0 yrs<br>         <b>ABG:</b> 5.08 Mg/ha/yr<br>         <b>BLG:</b> 1.88 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.5 yrs<br>         <b>ABG:</b> 7.74 Mg/ha/yr<br>         <b>BLG:</b> 3.42 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.5 yrs<br>         <b>ABG:</b> 6.2 Mg/ha/yr<br>         <b>BLG:</b> 4.26 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.5 yrs<br>         <b>ABG:</b> 9.71 Mg/ha/yr<br>         <b>BLG:</b> 10.4 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.8 yrs<br>         <b>ABG:</b> 7.05 Mg/ha/yr<br>         <b>BLG:</b> 4.05 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.8 yrs<br>         <b>ABG:</b> 9.64 Mg/ha/yr<br>         <b>BLG:</b> 2.82 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.8 yrs<br>         <b>ABG:</b> 8.51 Mg/ha/yr<br>         <b>BLG:</b> 4.62 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 1.8 yrs<br>         <b>ABG:</b> 11.33 Mg/ha/yr<br>         <b>BLG:</b> 4.99 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_c3e31efe777b5ecedfe4354f2dfb8286.setContent(html_d878654f64ca6fb7450b1346949629ef);
+            
+        
+
+        marker_ad9c654b12499afdcd48d876a30e59ef.bindPopup(popup_c3e31efe777b5ecedfe4354f2dfb8286)
+        ;
+
+        
+    
+    
+            marker_ad9c654b12499afdcd48d876a30e59ef.bindTooltip(
+                `<div>
+                     Albrecht and Kandji (2003), Kenya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4dcd173291256a99a279895756e9ed1a = L.marker(
+                [56.7861112, -4.1140518],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_a2c1fb74f16223321f38359923eedd46 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7a9b4ac911cec53728186d59c678d7ab = $(`<div id="html_7a9b4ac911cec53728186d59c678d7ab" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Beckert el al., (2016)<br><b>Location:</b> Scotland<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 24.0 yrs<br>         <b>ABG:</b> 3.17 Mg/ha/yr<br>         <b>BLG:</b> 0.83 Mg/ha/yr<br>         <b>Tree Density:</b> 100.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 24.0 yrs<br>         <b>ABG:</b> 2.98 Mg/ha/yr<br>         <b>BLG:</b> 0.77 Mg/ha/yr<br>         <b>Tree Density:</b> 200.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 24.0 yrs<br>         <b>ABG:</b> 1.12 Mg/ha/yr<br>         <b>BLG:</b> 0.29 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>         </div>`)[0];
+                popup_a2c1fb74f16223321f38359923eedd46.setContent(html_7a9b4ac911cec53728186d59c678d7ab);
+            
+        
+
+        marker_4dcd173291256a99a279895756e9ed1a.bindPopup(popup_a2c1fb74f16223321f38359923eedd46)
+        ;
+
+        
+    
+    
+            marker_4dcd173291256a99a279895756e9ed1a.bindTooltip(
+                `<div>
+                     Beckert el al., (2016), Scotland
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ba6ad2f60410780481134fa4fde44bd1 = L.marker(
+                [12.7503486, 122.7312101],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_800cab88b5652eae2945305ab0c03575 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c78e44e05a16a7e4f01c675c3d308070 = $(`<div id="html_c78e44e05a16a7e4f01c675c3d308070" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Brakas and Aune (2011)<br><b>Location:</b> Philippines<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 3.78 Mg/ha/yr<br>         <b>BLG:</b> 0.91 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.22 Mg/ha/yr<br>         <b>BLG:</b> 0.05 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 30.0 yrs<br>         <b>ABG:</b> 2.84 Mg/ha/yr<br>         <b>BLG:</b> 0.68 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 4.7 yrs<br>         <b>ABG:</b> 15.51 Mg/ha/yr<br>         <b>BLG:</b> 3.72 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 8.3 yrs<br>         <b>ABG:</b> 6.45 Mg/ha/yr<br>         <b>BLG:</b> 1.55 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 10.5 yrs<br>         <b>ABG:</b> 3.87 Mg/ha/yr<br>         <b>BLG:</b> 0.93 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 8.3 yrs<br>         <b>ABG:</b> 2.27 Mg/ha/yr<br>         <b>BLG:</b> 0.54 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 2.77 Mg/ha/yr<br>         <b>BLG:</b> 0.66 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 21.7 yrs<br>         <b>ABG:</b> 0.51 Mg/ha/yr<br>         <b>BLG:</b> 0.12 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 1.5 yrs<br>         <b>ABG:</b> 4.68 Mg/ha/yr<br>         <b>BLG:</b> 1.12 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 1.5 yrs<br>         <b>ABG:</b> 2.6 Mg/ha/yr<br>         <b>BLG:</b> 0.62 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 21.0 yrs<br>         <b>ABG:</b> 7.6 Mg/ha/yr<br>         <b>BLG:</b> 1.83 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 38.8 yrs<br>         <b>ABG:</b> 4.02 Mg/ha/yr<br>         <b>BLG:</b> 0.96 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 50.0 yrs<br>         <b>ABG:</b> 0.06 Mg/ha/yr<br>         <b>BLG:</b> 0.01 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_800cab88b5652eae2945305ab0c03575.setContent(html_c78e44e05a16a7e4f01c675c3d308070);
+            
+        
+
+        marker_ba6ad2f60410780481134fa4fde44bd1.bindPopup(popup_800cab88b5652eae2945305ab0c03575)
+        ;
+
+        
+    
+    
+            marker_ba6ad2f60410780481134fa4fde44bd1.bindTooltip(
+                `<div>
+                     Brakas and Aune (2011), Philippines
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_24fecd663e9c98cbf52b350cc57f2e93 = L.marker(
+                [14.4750607, -14.4529612],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_fccbb2668ea108282eacfc459d081060 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d9d3b21bb5b8462ee375be8c8082a22a = $(`<div id="html_d9d3b21bb5b8462ee375be8c8082a22a" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Bright et al., (2017)<br><b>Location:</b> Senegal<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.82 Mg/ha/yr<br>         <b>BLG:</b> 0.2 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.52 Mg/ha/yr<br>         <b>BLG:</b> 0.12 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.42 Mg/ha/yr<br>         <b>BLG:</b> 0.1 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.55 Mg/ha/yr<br>         <b>BLG:</b> 0.13 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 4.02 Mg/ha/yr<br>         <b>BLG:</b> 0.96 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 3.98 Mg/ha/yr<br>         <b>BLG:</b> 0.96 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 2.89 Mg/ha/yr<br>         <b>BLG:</b> 0.69 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 4.53 Mg/ha/yr<br>         <b>BLG:</b> 1.09 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.85 Mg/ha/yr<br>         <b>BLG:</b> 0.44 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.26 Mg/ha/yr<br>         <b>BLG:</b> 0.3 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.48 Mg/ha/yr<br>         <b>BLG:</b> 0.36 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.95 Mg/ha/yr<br>         <b>BLG:</b> 0.47 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.21 Mg/ha/yr<br>         <b>BLG:</b> 0.29 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.93 Mg/ha/yr<br>         <b>BLG:</b> 0.22 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.03 Mg/ha/yr<br>         <b>BLG:</b> 0.25 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.38 Mg/ha/yr<br>         <b>BLG:</b> 0.33 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 2.04 Mg/ha/yr<br>         <b>BLG:</b> 0.49 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.91 Mg/ha/yr<br>         <b>BLG:</b> 0.46 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.94 Mg/ha/yr<br>         <b>BLG:</b> 0.46 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 2.84 Mg/ha/yr<br>         <b>BLG:</b> 0.68 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>         </div>`)[0];
+                popup_fccbb2668ea108282eacfc459d081060.setContent(html_d9d3b21bb5b8462ee375be8c8082a22a);
+            
+        
+
+        marker_24fecd663e9c98cbf52b350cc57f2e93.bindPopup(popup_fccbb2668ea108282eacfc459d081060)
+        ;
+
+        
+    
+    
+            marker_24fecd663e9c98cbf52b350cc57f2e93.bindTooltip(
+                `<div>
+                     Bright et al., (2017), Senegal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e4942a37d04e4d4e8087304b3c933326 = L.marker(
+                [46.603354, 1.8883335],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_15bd4d6af4929c638584e50ffcc71e94 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fc6f642a1814443edcda65109e8ff7c6 = $(`<div id="html_fc6f642a1814443edcda65109e8ff7c6" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Cardinael et al., (2017)<br><b>Location:</b> France<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 26.0 yrs<br>         <b>ABG:</b> 1.41 Mg/ha/yr<br>         <b>BLG:</b> 0.35 Mg/ha/yr<br>         <b>Tree Density:</b> 200.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 0.0 Mg/ha/yr<br>         <b>BLG:</b> 0.0 Mg/ha/yr<br>         <b>Tree Density:</b> 34.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 0.01 Mg/ha/yr<br>         <b>BLG:</b> 0.01 Mg/ha/yr<br>         <b>Tree Density:</b> 35.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 41.0 yrs<br>         <b>ABG:</b> 0.48 Mg/ha/yr<br>         <b>BLG:</b> 0.14 Mg/ha/yr<br>         <b>Tree Density:</b> 102.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 18.0 yrs<br>         <b>ABG:</b> 0.6 Mg/ha/yr<br>         <b>BLG:</b> 0.17 Mg/ha/yr<br>         <b>Tree Density:</b> 110.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 18.0 yrs<br>         <b>ABG:</b> 1.48 Mg/ha/yr<br>         <b>BLG:</b> 0.37 Mg/ha/yr<br>         <b>Tree Density:</b> 100.0 /ha<br>         <hr>         </div>`)[0];
+                popup_15bd4d6af4929c638584e50ffcc71e94.setContent(html_fc6f642a1814443edcda65109e8ff7c6);
+            
+        
+
+        marker_e4942a37d04e4d4e8087304b3c933326.bindPopup(popup_15bd4d6af4929c638584e50ffcc71e94)
+        ;
+
+        
+    
+    
+            marker_e4942a37d04e4d4e8087304b3c933326.bindTooltip(
+                `<div>
+                     Cardinael et al., (2017), France
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ea3496be1101f86ac39df7862ed1bbab = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_6fbcb425c35a074e3ac99075e223a270 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7e3e9e9f108aff7310f5b15e0636d22f = $(`<div id="html_7e3e9e9f108aff7310f5b15e0636d22f" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Chauhan et al., (2010)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 3.84 Mg/ha/yr<br>         <b>BLG:</b> 0.85 Mg/ha/yr<br>         <b>Tree Density:</b> 741.0 /ha<br>         <hr>         </div>`)[0];
+                popup_6fbcb425c35a074e3ac99075e223a270.setContent(html_7e3e9e9f108aff7310f5b15e0636d22f);
+            
+        
+
+        marker_ea3496be1101f86ac39df7862ed1bbab.bindPopup(popup_6fbcb425c35a074e3ac99075e223a270)
+        ;
+
+        
+    
+    
+            marker_ea3496be1101f86ac39df7862ed1bbab.bindTooltip(
+                `<div>
+                     Chauhan et al., (2010), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_eedb4f1e59fde29f6eba11ecb1ccd1df = L.marker(
+                [9.6000359, 7.9999721],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_5f89b29822c5a248d2955990645b702e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_975aadb7fa91ac4976494b6bb7ca64cf = $(`<div id="html_975aadb7fa91ac4976494b6bb7ca64cf" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Diels et al., (2004)<br><b>Location:</b> Nigeria<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 16.0 yrs<br>         <b>ABG:</b> 3.76 Mg/ha/yr<br>         <b>BLG:</b> 0.56 Mg/ha/yr<br>         <b>Tree Density:</b> 4444.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 16.0 yrs<br>         <b>ABG:</b> 4.45 Mg/ha/yr<br>         <b>BLG:</b> 0.67 Mg/ha/yr<br>         <b>Tree Density:</b> 4444.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 16.0 yrs<br>         <b>ABG:</b> 3.41 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> 4444.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 16.0 yrs<br>         <b>ABG:</b> 3.93 Mg/ha/yr<br>         <b>BLG:</b> 0.3 Mg/ha/yr<br>         <b>Tree Density:</b> 4444.0 /ha<br>         <hr>         </div>`)[0];
+                popup_5f89b29822c5a248d2955990645b702e.setContent(html_975aadb7fa91ac4976494b6bb7ca64cf);
+            
+        
+
+        marker_eedb4f1e59fde29f6eba11ecb1ccd1df.bindPopup(popup_5f89b29822c5a248d2955990645b702e)
+        ;
+
+        
+    
+    
+            marker_eedb4f1e59fde29f6eba11ecb1ccd1df.bindTooltip(
+                `<div>
+                     Diels et al., (2004), Nigeria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_09dec010ca725abc84b2142aad0ecde1 = L.marker(
+                [-31.7613365, -71.3187697],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_90bcddf04514fc05d29cf070c0a80b4d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ef9b24cd0bd00d1e6eab8c2657f10c44 = $(`<div id="html_ef9b24cd0bd00d1e6eab8c2657f10c44" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Dube et al., (2012)<br><b>Location:</b> Chile<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 18.0 yrs<br>         <b>ABG:</b> 1.18 Mg/ha/yr<br>         <b>BLG:</b> 0.52 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>         </div>`)[0];
+                popup_90bcddf04514fc05d29cf070c0a80b4d.setContent(html_ef9b24cd0bd00d1e6eab8c2657f10c44);
+            
+        
+
+        marker_09dec010ca725abc84b2142aad0ecde1.bindPopup(popup_90bcddf04514fc05d29cf070c0a80b4d)
+        ;
+
+        
+    
+    
+            marker_09dec010ca725abc84b2142aad0ecde1.bindTooltip(
+                `<div>
+                     Dube et al., (2012), Chile
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_37ba133738dfb830abdac26b3c27c93a = L.marker(
+                [-6.8699697, -75.0458515],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_f3aa9875eeb3fb7f44dbea9f1ca287d8 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_845561815d132372bf0fedc251053086 = $(`<div id="html_845561815d132372bf0fedc251053086" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Ehrenbergerova et al., (2016)<br><b>Location:</b> Peru<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 2.02 Mg/ha/yr<br>         <b>BLG:</b> 0.47 Mg/ha/yr<br>         <b>Tree Density:</b> 176.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 4.13 Mg/ha/yr<br>         <b>BLG:</b> 0.91 Mg/ha/yr<br>         <b>Tree Density:</b> 124.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 7.64 Mg/ha/yr<br>         <b>BLG:</b> 1.76 Mg/ha/yr<br>         <b>Tree Density:</b> 472.0 /ha<br>         <hr>         </div>`)[0];
+                popup_f3aa9875eeb3fb7f44dbea9f1ca287d8.setContent(html_845561815d132372bf0fedc251053086);
+            
+        
+
+        marker_37ba133738dfb830abdac26b3c27c93a.bindPopup(popup_f3aa9875eeb3fb7f44dbea9f1ca287d8)
+        ;
+
+        
+    
+    
+            marker_37ba133738dfb830abdac26b3c27c93a.bindTooltip(
+                `<div>
+                     Ehrenbergerova et al., (2016), Peru
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_430f45e9d70dbf11504d8bd19edfa05e = L.marker(
+                [39.3260685, -4.8379791],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_8e03f331d4cac75eddc5383960543cfa = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_acd6008f2bec8e8e7ce73df899db9d30 = $(`<div id="html_acd6008f2bec8e8e7ce73df899db9d30" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Fernández-Núñez et al., (2010)<br><b>Location:</b> Spain<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 7.16 Mg/ha/yr<br>         <b>BLG:</b> 2.44 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 3.14 Mg/ha/yr<br>         <b>BLG:</b> 1.03 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 1.42 Mg/ha/yr<br>         <b>BLG:</b> 0.42 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.73 Mg/ha/yr<br>         <b>BLG:</b> 0.21 Mg/ha/yr<br>         <b>Tree Density:</b> 8333.0 /ha<br>         <hr>         </div>`)[0];
+                popup_8e03f331d4cac75eddc5383960543cfa.setContent(html_acd6008f2bec8e8e7ce73df899db9d30);
+            
+        
+
+        marker_430f45e9d70dbf11504d8bd19edfa05e.bindPopup(popup_8e03f331d4cac75eddc5383960543cfa)
+        ;
+
+        
+    
+    
+            marker_430f45e9d70dbf11504d8bd19edfa05e.bindTooltip(
+                `<div>
+                     Fernández-Núñez et al., (2010), Spain
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3c84aba1ba6211620ac29f0a846815db = L.marker(
+                [19.1399952, -72.3570972],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_23c28cc0681dd4263b1ca165962718dc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_797aa34c079c46de64713b60268474d4 = $(`<div id="html_797aa34c079c46de64713b60268474d4" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Isaac et al., (2003)<br><b>Location:</b> Haiti<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.22 Mg/ha/yr<br>         <b>BLG:</b> 0.53 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 4.41 Mg/ha/yr<br>         <b>BLG:</b> 1.06 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 4.03 Mg/ha/yr<br>         <b>BLG:</b> 0.97 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.74 Mg/ha/yr<br>         <b>BLG:</b> 0.42 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.29 Mg/ha/yr<br>         <b>BLG:</b> 0.55 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.49 Mg/ha/yr<br>         <b>BLG:</b> 0.36 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.78 Mg/ha/yr<br>         <b>BLG:</b> 0.67 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.52 Mg/ha/yr<br>         <b>BLG:</b> 0.6 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.65 Mg/ha/yr<br>         <b>BLG:</b> 0.39 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 0.45 Mg/ha/yr<br>         <b>BLG:</b> 0.11 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.1 Mg/ha/yr<br>         <b>BLG:</b> 0.5 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.72 Mg/ha/yr<br>         <b>BLG:</b> 0.41 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.17 Mg/ha/yr<br>         <b>BLG:</b> 0.52 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.37 Mg/ha/yr<br>         <b>BLG:</b> 0.81 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.33 Mg/ha/yr<br>         <b>BLG:</b> 0.32 Mg/ha/yr<br>         <b>Tree Density:</b> 25000.0 /ha<br>         <hr>         </div>`)[0];
+                popup_23c28cc0681dd4263b1ca165962718dc.setContent(html_797aa34c079c46de64713b60268474d4);
+            
+        
+
+        marker_3c84aba1ba6211620ac29f0a846815db.bindPopup(popup_23c28cc0681dd4263b1ca165962718dc)
+        ;
+
+        
+    
+    
+            marker_3c84aba1ba6211620ac29f0a846815db.bindTooltip(
+                `<div>
+                     Isaac et al., (2003), Haiti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_02570bd7bfd2c3346db66b5f89a8aca5 = L.marker(
+                [8.0300284, -1.0800271],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_9764fb2a269c9bbe91c9cfecc81d7a32 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8cc314df555b7e9e80180f5ab11ce6aa = $(`<div id="html_8cc314df555b7e9e80180f5ab11ce6aa" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Isaac et al., (2005)<br><b>Location:</b> Ghana<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.15 Mg/ha/yr<br>         <b>BLG:</b> 0.52 Mg/ha/yr<br>         <b>Tree Density:</b> 200.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 3.58 Mg/ha/yr<br>         <b>BLG:</b> 0.86 Mg/ha/yr<br>         <b>Tree Density:</b> 56.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 3.22 Mg/ha/yr<br>         <b>BLG:</b> 0.77 Mg/ha/yr<br>         <b>Tree Density:</b> 63.0 /ha<br>         <hr>         </div>`)[0];
+                popup_9764fb2a269c9bbe91c9cfecc81d7a32.setContent(html_8cc314df555b7e9e80180f5ab11ce6aa);
+            
+        
+
+        marker_02570bd7bfd2c3346db66b5f89a8aca5.bindPopup(popup_9764fb2a269c9bbe91c9cfecc81d7a32)
+        ;
+
+        
+    
+    
+            marker_02570bd7bfd2c3346db66b5f89a8aca5.bindTooltip(
+                `<div>
+                     Isaac et al., (2005), Ghana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6dbccdb59003636e47d5a29a6386a535 = L.marker(
+                [9.6000359, 7.9999721],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_0c326f84cffe4fbda01bdd6b604d1150 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5d3dc1f49966c544aad726c3cbacf128 = $(`<div id="html_5d3dc1f49966c544aad726c3cbacf128" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kang (1997)<br><b>Location:</b> Nigeria<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 4.86 Mg/ha/yr<br>         <b>BLG:</b> 1.17 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 6.58 Mg/ha/yr<br>         <b>BLG:</b> 1.58 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_0c326f84cffe4fbda01bdd6b604d1150.setContent(html_5d3dc1f49966c544aad726c3cbacf128);
+            
+        
+
+        marker_6dbccdb59003636e47d5a29a6386a535.bindPopup(popup_0c326f84cffe4fbda01bdd6b604d1150)
+        ;
+
+        
+    
+    
+            marker_6dbccdb59003636e47d5a29a6386a535.bindTooltip(
+                `<div>
+                     Kang (1997), Nigeria
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_868eeae4195cfc1c378bf00aa158b2d6 = L.marker(
+                [-14.5189121, 27.5589884],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_605d402b1e475c800c813ea1acd9db34 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2ff3f592d9a0a826a4bbafad3d5cfd8d = $(`<div id="html_2ff3f592d9a0a826a4bbafad3d5cfd8d" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kaonga and Bayliss-Smith (2009)<br><b>Location:</b> Zambia<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.7 Mg/ha/yr<br>         <b>BLG:</b> 0.95 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.5 Mg/ha/yr<br>         <b>BLG:</b> 0.95 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.5 Mg/ha/yr<br>         <b>BLG:</b> 1.05 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 4.25 Mg/ha/yr<br>         <b>BLG:</b> 1.65 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 3.35 Mg/ha/yr<br>         <b>BLG:</b> 1.3 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.15 Mg/ha/yr<br>         <b>BLG:</b> 0.85 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.15 Mg/ha/yr<br>         <b>BLG:</b> 0.85 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 4.75 Mg/ha/yr<br>         <b>BLG:</b> 1.85 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.75 Mg/ha/yr<br>         <b>BLG:</b> 0.7 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.7 Mg/ha/yr<br>         <b>BLG:</b> 1.05 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 3.95 Mg/ha/yr<br>         <b>BLG:</b> 1.0 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 4.9 Mg/ha/yr<br>         <b>BLG:</b> 1.6 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 1.45 Mg/ha/yr<br>         <b>BLG:</b> 0.5 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.35 Mg/ha/yr<br>         <b>BLG:</b> 0.85 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 3.0 Mg/ha/yr<br>         <b>BLG:</b> 0.95 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 1.05 Mg/ha/yr<br>         <b>BLG:</b> 0.4 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.9 Mg/ha/yr<br>         <b>BLG:</b> 1.0 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 3.95 Mg/ha/yr<br>         <b>BLG:</b> 1.4 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 3.45 Mg/ha/yr<br>         <b>BLG:</b> 1.15 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 3.2 Mg/ha/yr<br>         <b>BLG:</b> 1.05 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 1.5 Mg/ha/yr<br>         <b>BLG:</b> 4.5 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 2.0 yrs<br>         <b>ABG:</b> 2.25 Mg/ha/yr<br>         <b>BLG:</b> 0.75 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_605d402b1e475c800c813ea1acd9db34.setContent(html_2ff3f592d9a0a826a4bbafad3d5cfd8d);
+            
+        
+
+        marker_868eeae4195cfc1c378bf00aa158b2d6.bindPopup(popup_605d402b1e475c800c813ea1acd9db34)
+        ;
+
+        
+    
+    
+            marker_868eeae4195cfc1c378bf00aa158b2d6.bindTooltip(
+                `<div>
+                     Kaonga and Bayliss-Smith (2009), Zambia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4ac97562f932d6bf3fd290fd62d3bacb = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_c43e79afc1015a9d0e52293c6c66d6b6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_41ea99a998e114f9ff693f1d1549ffba = $(`<div id="html_41ea99a998e114f9ff693f1d1549ffba" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kaur et al., (2002)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 0.83 Mg/ha/yr<br>         <b>BLG:</b> 0.25 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 1.01 Mg/ha/yr<br>         <b>BLG:</b> 0.34 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 0.06 Mg/ha/yr<br>         <b>BLG:</b> 0.02 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 2.47 Mg/ha/yr<br>         <b>BLG:</b> 0.61 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 1.55 Mg/ha/yr<br>         <b>BLG:</b> 0.47 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>         </div>`)[0];
+                popup_c43e79afc1015a9d0e52293c6c66d6b6.setContent(html_41ea99a998e114f9ff693f1d1549ffba);
+            
+        
+
+        marker_4ac97562f932d6bf3fd290fd62d3bacb.bindPopup(popup_c43e79afc1015a9d0e52293c6c66d6b6)
+        ;
+
+        
+    
+    
+            marker_4ac97562f932d6bf3fd290fd62d3bacb.bindTooltip(
+                `<div>
+                     Kaur et al., (2002), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_bf429fd757519069228b53db26f0f2c6 = L.marker(
+                [-6.5247123, 35.7878438],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_1913ffbeb3deb8de3c8b3674ada69694 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1f8fa07f0d291c7eb231a7d1942a3354 = $(`<div id="html_1f8fa07f0d291c7eb231a7d1942a3354" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kimaro et al., (2011)<br><b>Location:</b> Tanzania<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.32 Mg/ha/yr<br>         <b>BLG:</b> 0.56 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 5.1 Mg/ha/yr<br>         <b>BLG:</b> 1.22 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.08 Mg/ha/yr<br>         <b>BLG:</b> 0.74 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.84 Mg/ha/yr<br>         <b>BLG:</b> 0.92 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.78 Mg/ha/yr<br>         <b>BLG:</b> 0.91 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.32 Mg/ha/yr<br>         <b>BLG:</b> 0.56 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.6 Mg/ha/yr<br>         <b>BLG:</b> 0.86 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.9 Mg/ha/yr<br>         <b>BLG:</b> 0.7 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.36 Mg/ha/yr<br>         <b>BLG:</b> 0.81 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_1913ffbeb3deb8de3c8b3674ada69694.setContent(html_1f8fa07f0d291c7eb231a7d1942a3354);
+            
+        
+
+        marker_bf429fd757519069228b53db26f0f2c6.bindPopup(popup_1913ffbeb3deb8de3c8b3674ada69694)
+        ;
+
+        
+    
+    
+            marker_bf429fd757519069228b53db26f0f2c6.bindTooltip(
+                `<div>
+                     Kimaro et al., (2011), Tanzania
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0fa5ceee88334af86cb698fff82e6404 = L.marker(
+                [8.559559, -81.1308434],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_fa8da04627976962a08cd945bb25c32e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1b1e3a1684dd133db90823fcb70d745 = $(`<div id="html_d1b1e3a1684dd133db90823fcb70d745" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kirby and Potvin (2007)<br><b>Location:</b> Panama<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 23.2 yrs<br>         <b>ABG:</b> 3.25 Mg/ha/yr<br>         <b>BLG:</b> 0.78 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_fa8da04627976962a08cd945bb25c32e.setContent(html_d1b1e3a1684dd133db90823fcb70d745);
+            
+        
+
+        marker_0fa5ceee88334af86cb698fff82e6404.bindPopup(popup_fa8da04627976962a08cd945bb25c32e)
+        ;
+
+        
+    
+    
+            marker_0fa5ceee88334af86cb698fff82e6404.bindTooltip(
+                `<div>
+                     Kirby and Potvin (2007), Panama
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b366b4c2f85db69cdae6fa08c1bcd74c = L.marker(
+                [53.71446235908131, -101.02067921650072],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_4dcc0b664ee7430bf97beb6d1ecc2725 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_adc6383f95b11835aced5cc0ae70e49e = $(`<div id="html_adc6383f95b11835aced5cc0ae70e49e" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kort and Turnock (1999)<br><b>Location:</b> Saskatchewan, Manitoba<br><br>         <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 53.0 yrs<br>         <b>ABG:</b> 0.58 Mg/ha/yr<br>         <b>BLG:</b> 0.15 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 52.0 yrs<br>         <b>ABG:</b> 0.65 Mg/ha/yr<br>         <b>BLG:</b> 0.17 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 33.0 yrs<br>         <b>ABG:</b> 3.15 Mg/ha/yr<br>         <b>BLG:</b> 0.82 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 37.0 yrs<br>         <b>ABG:</b> 1.08 Mg/ha/yr<br>         <b>BLG:</b> 0.28 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 54.0 yrs<br>         <b>ABG:</b> 0.54 Mg/ha/yr<br>         <b>BLG:</b> 0.14 Mg/ha/yr<br>         <b>Tree Density:</b> 286.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 66.0 yrs<br>         <b>ABG:</b> 0.62 Mg/ha/yr<br>         <b>BLG:</b> 0.16 Mg/ha/yr<br>         <b>Tree Density:</b> 286.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 43.0 yrs<br>         <b>ABG:</b> 0.56 Mg/ha/yr<br>         <b>BLG:</b> 0.15 Mg/ha/yr<br>         <b>Tree Density:</b> 286.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 33.0 yrs<br>         <b>ABG:</b> 0.79 Mg/ha/yr<br>         <b>BLG:</b> 0.2 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 23.0 yrs<br>         <b>ABG:</b> 0.87 Mg/ha/yr<br>         <b>BLG:</b> 0.23 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 20.0 yrs<br>         <b>ABG:</b> 0.85 Mg/ha/yr<br>         <b>BLG:</b> 0.22 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 49.0 yrs<br>         <b>ABG:</b> 0.31 Mg/ha/yr<br>         <b>BLG:</b> 0.08 Mg/ha/yr<br>         <b>Tree Density:</b> 3333.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.44 Mg/ha/yr<br>         <b>BLG:</b> 0.11 Mg/ha/yr<br>         <b>Tree Density:</b> 1000.0 /ha<br>         <hr>         </div>`)[0];
+                popup_4dcc0b664ee7430bf97beb6d1ecc2725.setContent(html_adc6383f95b11835aced5cc0ae70e49e);
+            
+        
+
+        marker_b366b4c2f85db69cdae6fa08c1bcd74c.bindPopup(popup_4dcc0b664ee7430bf97beb6d1ecc2725)
+        ;
+
+        
+    
+    
+            marker_b366b4c2f85db69cdae6fa08c1bcd74c.bindTooltip(
+                `<div>
+                     Kort and Turnock (1999), Saskatchewan, Manitoba
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3188c21cf0958a92f006fa130e89bab0 = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_4a17add7684762d7281a5e11aa39605b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_0628f67133ed7d50dcedbeb149fb52f7 = $(`<div id="html_0628f67133ed7d50dcedbeb149fb52f7" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Kumar et al., (1998)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 17.43 Mg/ha/yr<br>         <b>BLG:</b> 0.95 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 2.17 Mg/ha/yr<br>         <b>BLG:</b> 0.4 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 4.38 Mg/ha/yr<br>         <b>BLG:</b> 0.54 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 3.15 Mg/ha/yr<br>         <b>BLG:</b> 0.6 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 5.1 Mg/ha/yr<br>         <b>BLG:</b> 0.3 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 3.68 Mg/ha/yr<br>         <b>BLG:</b> 0.67 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 1.22 Mg/ha/yr<br>         <b>BLG:</b> 0.17 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 9.8 Mg/ha/yr<br>         <b>BLG:</b> 0.74 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 8.8 yrs<br>         <b>ABG:</b> 3.53 Mg/ha/yr<br>         <b>BLG:</b> 0.39 Mg/ha/yr<br>         <b>Tree Density:</b> 1250.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 12.32 Mg/ha/yr<br>         <b>BLG:</b> 2.96 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 1.3 Mg/ha/yr<br>         <b>BLG:</b> 0.31 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.26 Mg/ha/yr<br>         <b>BLG:</b> 0.54 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 4.26 Mg/ha/yr<br>         <b>BLG:</b> 1.02 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 13.21 Mg/ha/yr<br>         <b>BLG:</b> 3.26 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.86 Mg/ha/yr<br>         <b>BLG:</b> 0.84 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.37 Mg/ha/yr<br>         <b>BLG:</b> 0.68 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 6.19 Mg/ha/yr<br>         <b>BLG:</b> 2.4 Mg/ha/yr<br>         <b>Tree Density:</b> 2500.0 /ha<br>         <hr>         </div>`)[0];
+                popup_4a17add7684762d7281a5e11aa39605b.setContent(html_0628f67133ed7d50dcedbeb149fb52f7);
+            
+        
+
+        marker_3188c21cf0958a92f006fa130e89bab0.bindPopup(popup_4a17add7684762d7281a5e11aa39605b)
+        ;
+
+        
+    
+    
+            marker_3188c21cf0958a92f006fa130e89bab0.bindTooltip(
+                `<div>
+                     Kumar et al., (1998), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b384e9141b0daa6562fe8057fb2ba50f = L.marker(
+                [12.7503486, 122.7312101],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_8e8841a087faf2e0b3e38637d50f634b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e30367b773120e872a608a3318bd463d = $(`<div id="html_e30367b773120e872a608a3318bd463d" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Lasco and Suson (1999)<br><b>Location:</b> Philippines<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 5.3 Mg/ha/yr<br>         <b>BLG:</b> 1.27 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_8e8841a087faf2e0b3e38637d50f634b.setContent(html_e30367b773120e872a608a3318bd463d);
+            
+        
+
+        marker_b384e9141b0daa6562fe8057fb2ba50f.bindPopup(popup_8e8841a087faf2e0b3e38637d50f634b)
+        ;
+
+        
+    
+    
+            marker_b384e9141b0daa6562fe8057fb2ba50f.bindTooltip(
+                `<div>
+                     Lasco and Suson (1999), Philippines
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7aedc349017ef635860fd05fb3eb48a8 = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_db5145a528ddf27b6da355f50ef3fcfd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b2c908da9f516a897c36a93d92f40383 = $(`<div id="html_b2c908da9f516a897c36a93d92f40383" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Maikhuri et al., (2000)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 0.98 Mg/ha/yr<br>         <b>BLG:</b> 0.18 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 4.61 Mg/ha/yr<br>         <b>BLG:</b> 0.24 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.15 Mg/ha/yr<br>         <b>BLG:</b> 1.11 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 0.94 Mg/ha/yr<br>         <b>BLG:</b> 0.28 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.16 Mg/ha/yr<br>         <b>BLG:</b> 0.23 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.72 Mg/ha/yr<br>         <b>BLG:</b> 0.52 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 0.83 Mg/ha/yr<br>         <b>BLG:</b> 0.41 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.08 Mg/ha/yr<br>         <b>BLG:</b> 0.2 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 0.64 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.42 Mg/ha/yr<br>         <b>BLG:</b> 0.15 Mg/ha/yr<br>         <b>Tree Density:</b> 1111.0 /ha<br>         <hr>         </div>`)[0];
+                popup_db5145a528ddf27b6da355f50ef3fcfd.setContent(html_b2c908da9f516a897c36a93d92f40383);
+            
+        
+
+        marker_7aedc349017ef635860fd05fb3eb48a8.bindPopup(popup_db5145a528ddf27b6da355f50ef3fcfd)
+        ;
+
+        
+    
+    
+            marker_7aedc349017ef635860fd05fb3eb48a8.bindTooltip(
+                `<div>
+                     Maikhuri et al., (2000), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c60671b55fd40c5d5fc72ca752b70623 = L.marker(
+                [-13.2687204, 33.9301963],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_55eb214abc7ad81f24e1e08117472f9a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c69e64f85e48d584374f703cf934f7b7 = $(`<div id="html_c69e64f85e48d584374f703cf934f7b7" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Makumba et al., (2007)<br><b>Location:</b> Malawi<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 1.2 Mg/ha/yr<br>         <b>BLG:</b> 0.29 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 1.8 Mg/ha/yr<br>         <b>BLG:</b> 0.43 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 1.7 Mg/ha/yr<br>         <b>BLG:</b> 0.41 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.2 Mg/ha/yr<br>         <b>BLG:</b> 0.53 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.4 Mg/ha/yr<br>         <b>BLG:</b> 0.58 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.5 Mg/ha/yr<br>         <b>BLG:</b> 0.6 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.8 Mg/ha/yr<br>         <b>BLG:</b> 0.67 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 1.5 Mg/ha/yr<br>         <b>BLG:</b> 0.36 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.1 Mg/ha/yr<br>         <b>BLG:</b> 0.5 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.3 Mg/ha/yr<br>         <b>BLG:</b> 0.55 Mg/ha/yr<br>         <b>Tree Density:</b> 6584.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 0.3 Mg/ha/yr<br>         <b>BLG:</b> 0.07 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 0.8 Mg/ha/yr<br>         <b>BLG:</b> 0.19 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 1.1 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.4 Mg/ha/yr<br>         <b>BLG:</b> 0.58 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 1.4 Mg/ha/yr<br>         <b>BLG:</b> 0.34 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 1.4 Mg/ha/yr<br>         <b>BLG:</b> 0.34 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>         </div>`)[0];
+                popup_55eb214abc7ad81f24e1e08117472f9a.setContent(html_c69e64f85e48d584374f703cf934f7b7);
+            
+        
+
+        marker_c60671b55fd40c5d5fc72ca752b70623.bindPopup(popup_55eb214abc7ad81f24e1e08117472f9a)
+        ;
+
+        
+    
+    
+            marker_c60671b55fd40c5d5fc72ca752b70623.bindTooltip(
+                `<div>
+                     Makumba et al., (2007), Malawi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f306581a4baca968dc7310def0be3657 = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_bf2354f15741035217434fd68f0cde39 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2a4708002ddf747565cb361aaa7cdf6e = $(`<div id="html_2a4708002ddf747565cb361aaa7cdf6e" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Mangalassery et al., (2014)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.46 Mg/ha/yr<br>         <b>BLG:</b> 0.16 Mg/ha/yr<br>         <b>Tree Density:</b> 277.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.45 Mg/ha/yr<br>         <b>BLG:</b> 0.11 Mg/ha/yr<br>         <b>Tree Density:</b> 277.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.32 Mg/ha/yr<br>         <b>BLG:</b> 0.13 Mg/ha/yr<br>         <b>Tree Density:</b> 277.0 /ha<br>         <hr>                  <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.33 Mg/ha/yr<br>         <b>BLG:</b> 0.11 Mg/ha/yr<br>         <b>Tree Density:</b> 277.0 /ha<br>         <hr>         </div>`)[0];
+                popup_bf2354f15741035217434fd68f0cde39.setContent(html_2a4708002ddf747565cb361aaa7cdf6e);
+            
+        
+
+        marker_f306581a4baca968dc7310def0be3657.bindPopup(popup_bf2354f15741035217434fd68f0cde39)
+        ;
+
+        
+    
+    
+            marker_f306581a4baca968dc7310def0be3657.bindTooltip(
+                `<div>
+                     Mangalassery et al., (2014), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_42414d60020cf0cee779290ed25bbffe = L.marker(
+                [35.0000663, 104.999955],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_9e5b899aa62f12e1d6a459f0052b8e70 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_28bde9693629afd1142115dada804478 = $(`<div id="html_28bde9693629afd1142115dada804478" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Mao et al., (2012)<br><b>Location:</b> China<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 2.96 Mg/ha/yr<br>         <b>BLG:</b> 0.77 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 2.98 Mg/ha/yr<br>         <b>BLG:</b> 0.78 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>         </div>`)[0];
+                popup_9e5b899aa62f12e1d6a459f0052b8e70.setContent(html_28bde9693629afd1142115dada804478);
+            
+        
+
+        marker_42414d60020cf0cee779290ed25bbffe.bindPopup(popup_9e5b899aa62f12e1d6a459f0052b8e70)
+        ;
+
+        
+    
+    
+            marker_42414d60020cf0cee779290ed25bbffe.bindTooltip(
+                `<div>
+                     Mao et al., (2012), China
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e91f24db4166d0fe7f8c6b14810e9f0b = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_10da60f711ae8a7fdaac103f534084e3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_fa3a275785817c3fda4e5cda65d80630 = $(`<div id="html_fa3a275785817c3fda4e5cda65d80630" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Mittal and Singh (1989)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 1.65 Mg/ha/yr<br>         <b>BLG:</b> 0.39 Mg/ha/yr<br>         <b>Tree Density:</b> 10667.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 1.93 Mg/ha/yr<br>         <b>BLG:</b> 0.46 Mg/ha/yr<br>         <b>Tree Density:</b> 10667.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 6.0 yrs<br>         <b>ABG:</b> 1.55 Mg/ha/yr<br>         <b>BLG:</b> 0.37 Mg/ha/yr<br>         <b>Tree Density:</b> 10667.0 /ha<br>         <hr>         </div>`)[0];
+                popup_10da60f711ae8a7fdaac103f534084e3.setContent(html_fa3a275785817c3fda4e5cda65d80630);
+            
+        
+
+        marker_e91f24db4166d0fe7f8c6b14810e9f0b.bindPopup(popup_10da60f711ae8a7fdaac103f534084e3)
+        ;
+
+        
+    
+    
+            marker_e91f24db4166d0fe7f8c6b14810e9f0b.bindTooltip(
+                `<div>
+                     Mittal and Singh (1989), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_9eb2c41f4e8e51626d00cf77e769f8eb = L.marker(
+                [10.2116702, 38.6521203],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_7323225eddfa0446890994127aad286c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cd5e027ba68f67ff254c295a6ba63aa6 = $(`<div id="html_cd5e027ba68f67ff254c295a6ba63aa6" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Negash and Kanninen, (2015)<br><b>Location:</b> Ethiopia<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 50.0 yrs<br>         <b>ABG:</b> 1.19 Mg/ha/yr<br>         <b>BLG:</b> 0.33 Mg/ha/yr<br>         <b>Tree Density:</b> 445.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 50.0 yrs<br>         <b>ABG:</b> 1.78 Mg/ha/yr<br>         <b>BLG:</b> 0.5 Mg/ha/yr<br>         <b>Tree Density:</b> 260.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 50.0 yrs<br>         <b>ABG:</b> 1.91 Mg/ha/yr<br>         <b>BLG:</b> 0.53 Mg/ha/yr<br>         <b>Tree Density:</b> 140.0 /ha<br>         <hr>         </div>`)[0];
+                popup_7323225eddfa0446890994127aad286c.setContent(html_cd5e027ba68f67ff254c295a6ba63aa6);
+            
+        
+
+        marker_9eb2c41f4e8e51626d00cf77e769f8eb.bindPopup(popup_7323225eddfa0446890994127aad286c)
+        ;
+
+        
+    
+    
+            marker_9eb2c41f4e8e51626d00cf77e769f8eb.bindTooltip(
+                `<div>
+                     Negash and Kanninen, (2015), Ethiopia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fded331df943fb2f70f3ea915f8cf9a3 = L.marker(
+                [4.6125522, 13.1535811],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_3e810779cfd2166a8ef4c8b0a85ede51 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_54b0fa815c9e5c7c6175b12cca8f4830 = $(`<div id="html_54b0fa815c9e5c7c6175b12cca8f4830" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Norgrove and Hauser (2013)<br><b>Location:</b> Cameroon<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 35.0 yrs<br>         <b>ABG:</b> 3.16 Mg/ha/yr<br>         <b>BLG:</b> 0.71 Mg/ha/yr<br>         <b>Tree Density:</b> 115.0 /ha<br>         <hr>         </div>`)[0];
+                popup_3e810779cfd2166a8ef4c8b0a85ede51.setContent(html_54b0fa815c9e5c7c6175b12cca8f4830);
+            
+        
+
+        marker_fded331df943fb2f70f3ea915f8cf9a3.bindPopup(popup_3e810779cfd2166a8ef4c8b0a85ede51)
+        ;
+
+        
+    
+    
+            marker_fded331df943fb2f70f3ea915f8cf9a3.bindTooltip(
+                `<div>
+                     Norgrove and Hauser (2013), Cameroon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4ba7f6d987919d8996e6eab4806fb316 = L.marker(
+                [-6.5247123, 35.7878438],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_a6a8f41a51d913db08e26bb3e939de80 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ba58a18521bf0d6730b318590cab012a = $(`<div id="html_ba58a18521bf0d6730b318590cab012a" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Nyadzi et al., (2003)<br><b>Location:</b> Tanzania<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 4.96 Mg/ha/yr<br>         <b>BLG:</b> 1.19 Mg/ha/yr<br>         <b>Tree Density:</b> 625.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.98 Mg/ha/yr<br>         <b>BLG:</b> 0.72 Mg/ha/yr<br>         <b>Tree Density:</b> 625.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 5.41 Mg/ha/yr<br>         <b>BLG:</b> 1.3 Mg/ha/yr<br>         <b>Tree Density:</b> 625.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.8 Mg/ha/yr<br>         <b>BLG:</b> 0.67 Mg/ha/yr<br>         <b>Tree Density:</b> 625.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.44 Mg/ha/yr<br>         <b>BLG:</b> 0.59 Mg/ha/yr<br>         <b>Tree Density:</b> 625.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 0.46 Mg/ha/yr<br>         <b>BLG:</b> 0.14 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 4.76 Mg/ha/yr<br>         <b>BLG:</b> 1.14 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 5.97 Mg/ha/yr<br>         <b>BLG:</b> 1.43 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>         </div>`)[0];
+                popup_a6a8f41a51d913db08e26bb3e939de80.setContent(html_ba58a18521bf0d6730b318590cab012a);
+            
+        
+
+        marker_4ba7f6d987919d8996e6eab4806fb316.bindPopup(popup_a6a8f41a51d913db08e26bb3e939de80)
+        ;
+
+        
+    
+    
+            marker_4ba7f6d987919d8996e6eab4806fb316.bindTooltip(
+                `<div>
+                     Nyadzi et al., (2003), Tanzania
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dbf9bb89f4b695bd1ea918ab1be7b4b3 = L.marker(
+                [10.2735633, -84.0739102],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_866de850faab6e11596b485720d660f6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_99643a24a7778e6682faaa3a9b8fbffb = $(`<div id="html_99643a24a7778e6682faaa3a9b8fbffb" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Oelbermann et al., (2005)<br><b>Location:</b> Costa Rica<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 19.0 yrs<br>         <b>ABG:</b> 2.93 Mg/ha/yr<br>         <b>BLG:</b> 0.7 Mg/ha/yr<br>         <b>Tree Density:</b> 555.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 19.0 yrs<br>         <b>ABG:</b> 3.99 Mg/ha/yr<br>         <b>BLG:</b> 0.96 Mg/ha/yr<br>         <b>Tree Density:</b> 555.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 19.0 yrs<br>         <b>ABG:</b> 4.54 Mg/ha/yr<br>         <b>BLG:</b> 1.09 Mg/ha/yr<br>         <b>Tree Density:</b> 3333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 19.0 yrs<br>         <b>ABG:</b> 4.57 Mg/ha/yr<br>         <b>BLG:</b> 1.1 Mg/ha/yr<br>         <b>Tree Density:</b> 3333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 2.13 Mg/ha/yr<br>         <b>BLG:</b> 0.51 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 1.04 Mg/ha/yr<br>         <b>BLG:</b> 0.25 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 0.52 Mg/ha/yr<br>         <b>BLG:</b> 0.12 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 0.6 Mg/ha/yr<br>         <b>BLG:</b> 0.14 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 1.14 Mg/ha/yr<br>         <b>BLG:</b> 0.27 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 0.76 Mg/ha/yr<br>         <b>BLG:</b> 0.18 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 0.13 Mg/ha/yr<br>         <b>BLG:</b> 0.03 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 0.2 Mg/ha/yr<br>         <b>BLG:</b> 0.05 Mg/ha/yr<br>         <b>Tree Density:</b> 833.0 /ha<br>         <hr>         </div>`)[0];
+                popup_866de850faab6e11596b485720d660f6.setContent(html_99643a24a7778e6682faaa3a9b8fbffb);
+            
+        
+
+        marker_dbf9bb89f4b695bd1ea918ab1be7b4b3.bindPopup(popup_866de850faab6e11596b485720d660f6)
+        ;
+
+        
+    
+    
+            marker_dbf9bb89f4b695bd1ea918ab1be7b4b3.bindTooltip(
+                `<div>
+                     Oelbermann et al., (2005), Costa Rica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a7d371ae367ec0ca3b37e9a34885b9e0 = L.marker(
+                [-10.3333333, -53.2],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_fdccc8dd9863bae2f4f989af1edc0780 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_21e48efd74bf91294d2ab2b7c23e4b96 = $(`<div id="html_21e48efd74bf91294d2ab2b7c23e4b96" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Palm et al., (1999)<br><b>Location:</b> Brazil<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 3.92 Mg/ha/yr<br>         <b>BLG:</b> 0.94 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 5.6 Mg/ha/yr<br>         <b>BLG:</b> 1.34 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.14 Mg/ha/yr<br>         <b>BLG:</b> 0.51 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 7.26 Mg/ha/yr<br>         <b>BLG:</b> 1.74 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_fdccc8dd9863bae2f4f989af1edc0780.setContent(html_21e48efd74bf91294d2ab2b7c23e4b96);
+            
+        
+
+        marker_a7d371ae367ec0ca3b37e9a34885b9e0.bindPopup(popup_fdccc8dd9863bae2f4f989af1edc0780)
+        ;
+
+        
+    
+    
+            marker_a7d371ae367ec0ca3b37e9a34885b9e0.bindTooltip(
+                `<div>
+                     Palm et al., (1999), Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f03c769432d42e69a451b2baf33b7287 = L.marker(
+                [4.6125522, 13.1535811],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_1778a538a9372516131b5568a9139818 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_52e181140e1c3d9ae7d2ded6af6e66d2 = $(`<div id="html_52e181140e1c3d9ae7d2ded6af6e66d2" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Palm et al., (1999)<br><b>Location:</b> Cameroon<br><br>         <b>AFS:</b> Fallow<br>         <b>Age:</b> 23.0 yrs<br>         <b>ABG:</b> 7.26 Mg/ha/yr<br>         <b>BLG:</b> 1.74 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 9.0 yrs<br>         <b>ABG:</b> 8.46 Mg/ha/yr<br>         <b>BLG:</b> 2.03 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 2.9 Mg/ha/yr<br>         <b>BLG:</b> 0.7 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Fallow<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 3.55 Mg/ha/yr<br>         <b>BLG:</b> 0.85 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_1778a538a9372516131b5568a9139818.setContent(html_52e181140e1c3d9ae7d2ded6af6e66d2);
+            
+        
+
+        marker_f03c769432d42e69a451b2baf33b7287.bindPopup(popup_1778a538a9372516131b5568a9139818)
+        ;
+
+        
+    
+    
+            marker_f03c769432d42e69a451b2baf33b7287.bindTooltip(
+                `<div>
+                     Palm et al., (1999), Cameroon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d2f358fd7b44d9d102d06f6eeb4425a7 = L.marker(
+                [-2.4833826, 117.8902853],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_d51f0fe4984521bd6173dc9c599a6659 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b92b4719722cebe75c8a80c232708c32 = $(`<div id="html_b92b4719722cebe75c8a80c232708c32" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Palm et al., (1999)<br><b>Location:</b> Indonesia<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 9.29 Mg/ha/yr<br>         <b>BLG:</b> 2.23 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 3.57 Mg/ha/yr<br>         <b>BLG:</b> 0.86 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_d51f0fe4984521bd6173dc9c599a6659.setContent(html_b92b4719722cebe75c8a80c232708c32);
+            
+        
+
+        marker_d2f358fd7b44d9d102d06f6eeb4425a7.bindPopup(popup_d51f0fe4984521bd6173dc9c599a6659)
+        ;
+
+        
+    
+    
+            marker_d2f358fd7b44d9d102d06f6eeb4425a7.bindTooltip(
+                `<div>
+                     Palm et al., (1999), Indonesia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d9fb1b1c065dd576e20bbd4df018b245 = L.marker(
+                [61.0666922, -107.991707],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_bb11d437087656bc627871161d4878e7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_edf093019915701d264f53a517a94b60 = $(`<div id="html_edf093019915701d264f53a517a94b60" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Peichl et al., (2006)<br><b>Location:</b> Canada<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 0.99 Mg/ha/yr<br>         <b>BLG:</b> 0.17 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 0.4 Mg/ha/yr<br>         <b>BLG:</b> 0.09 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>         </div>`)[0];
+                popup_bb11d437087656bc627871161d4878e7.setContent(html_edf093019915701d264f53a517a94b60);
+            
+        
+
+        marker_d9fb1b1c065dd576e20bbd4df018b245.bindPopup(popup_bb11d437087656bc627871161d4878e7)
+        ;
+
+        
+    
+    
+            marker_d9fb1b1c065dd576e20bbd4df018b245.bindTooltip(
+                `<div>
+                     Peichl et al., (2006), Canada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_662c98617622105d72c6d3d6d95f438f = L.marker(
+                [10.2735633, -84.0739102],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_49b8a7b0257f5e7b619c17d5a10ad8cf = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ca47f1e084b368d7f22f9686147667ba = $(`<div id="html_ca47f1e084b368d7f22f9686147667ba" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Polzot (2004)<br><b>Location:</b> Costa Rica<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 2.11 Mg/ha/yr<br>         <b>BLG:</b> 0.51 Mg/ha/yr<br>         <b>Tree Density:</b> 95.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 1.84 Mg/ha/yr<br>         <b>BLG:</b> 0.44 Mg/ha/yr<br>         <b>Tree Density:</b> 75.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 1.04 Mg/ha/yr<br>         <b>BLG:</b> 0.25 Mg/ha/yr<br>         <b>Tree Density:</b> 115.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.97 Mg/ha/yr<br>         <b>BLG:</b> 0.23 Mg/ha/yr<br>         <b>Tree Density:</b> 238.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.73 Mg/ha/yr<br>         <b>BLG:</b> 0.18 Mg/ha/yr<br>         <b>Tree Density:</b> 160.0 /ha<br>         <hr>         </div>`)[0];
+                popup_49b8a7b0257f5e7b619c17d5a10ad8cf.setContent(html_ca47f1e084b368d7f22f9686147667ba);
+            
+        
+
+        marker_662c98617622105d72c6d3d6d95f438f.bindPopup(popup_49b8a7b0257f5e7b619c17d5a10ad8cf)
+        ;
+
+        
+    
+    
+            marker_662c98617622105d72c6d3d6d95f438f.bindTooltip(
+                `<div>
+                     Polzot (2004), Costa Rica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_203cc28fba2fcb648d5f0f10bf86d014 = L.marker(
+                [-1.0074826, 121.47984106635917],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_b3b22343976679c5bb6861741410af11 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f3b6d148f82965d838f75005500645a8 = $(`<div id="html_f3b6d148f82965d838f75005500645a8" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Rajab et al., (2016)<br><b>Location:</b> Sulawesi<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.93 Mg/ha/yr<br>         <b>BLG:</b> 0.29 Mg/ha/yr<br>         <b>Tree Density:</b> 428.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 18.0 yrs<br>         <b>ABG:</b> 2.64 Mg/ha/yr<br>         <b>BLG:</b> 0.54 Mg/ha/yr<br>         <b>Tree Density:</b> 357.0 /ha<br>         <hr>         </div>`)[0];
+                popup_b3b22343976679c5bb6861741410af11.setContent(html_f3b6d148f82965d838f75005500645a8);
+            
+        
+
+        marker_203cc28fba2fcb648d5f0f10bf86d014.bindPopup(popup_b3b22343976679c5bb6861741410af11)
+        ;
+
+        
+    
+    
+            marker_203cc28fba2fcb648d5f0f10bf86d014.bindTooltip(
+                `<div>
+                     Rajab et al., (2016), Sulawesi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b54a8881b067929ba687fd0f71b08888 = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_52193b18e35ff0ec92e241acb4f3a53d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_170ebd1fd51e27e1a8036e65cb37fd0b = $(`<div id="html_170ebd1fd51e27e1a8036e65cb37fd0b" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Rao et al., (1991)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 1.91 Mg/ha/yr<br>         <b>BLG:</b> 0.46 Mg/ha/yr<br>         <b>Tree Density:</b> 13333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 1.97 Mg/ha/yr<br>         <b>BLG:</b> 0.47 Mg/ha/yr<br>         <b>Tree Density:</b> 13333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 1.09 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 1.15 Mg/ha/yr<br>         <b>BLG:</b> 0.28 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 3.48 Mg/ha/yr<br>         <b>BLG:</b> 0.84 Mg/ha/yr<br>         <b>Tree Density:</b> 13333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 4.21 Mg/ha/yr<br>         <b>BLG:</b> 1.01 Mg/ha/yr<br>         <b>Tree Density:</b> 13333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 2.83 Mg/ha/yr<br>         <b>BLG:</b> 0.68 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 2.91 Mg/ha/yr<br>         <b>BLG:</b> 0.7 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 4.34 Mg/ha/yr<br>         <b>BLG:</b> 1.04 Mg/ha/yr<br>         <b>Tree Density:</b> 13333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 5.81 Mg/ha/yr<br>         <b>BLG:</b> 1.4 Mg/ha/yr<br>         <b>Tree Density:</b> 13333.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 3.36 Mg/ha/yr<br>         <b>BLG:</b> 0.81 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>                  <b>AFS:</b> Intercropping<br>         <b>Age:</b> 4.0 yrs<br>         <b>ABG:</b> 3.61 Mg/ha/yr<br>         <b>BLG:</b> 0.87 Mg/ha/yr<br>         <b>Tree Density:</b> 7407.0 /ha<br>         <hr>         </div>`)[0];
+                popup_52193b18e35ff0ec92e241acb4f3a53d.setContent(html_170ebd1fd51e27e1a8036e65cb37fd0b);
+            
+        
+
+        marker_b54a8881b067929ba687fd0f71b08888.bindPopup(popup_52193b18e35ff0ec92e241acb4f3a53d)
+        ;
+
+        
+    
+    
+            marker_b54a8881b067929ba687fd0f71b08888.bindTooltip(
+                `<div>
+                     Rao et al., (1991), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_2a256b89c6dfddb84a7184c2dfcaf90f = L.marker(
+                [-2.4833826, 117.8902853],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_64564b2ccab2d6287e3a5345be2b4a05 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bd758b65881f9dd1e64a907502daaa74 = $(`<div id="html_bd758b65881f9dd1e64a907502daaa74" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Roshetko et al., (2002)<br><b>Location:</b> Indonesia<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 4.13 Mg/ha/yr<br>         <b>BLG:</b> 0.99 Mg/ha/yr<br>         <b>Tree Density:</b> 840.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.42 Mg/ha/yr<br>         <b>BLG:</b> 0.1 Mg/ha/yr<br>         <b>Tree Density:</b> 260.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 2.27 Mg/ha/yr<br>         <b>BLG:</b> 0.55 Mg/ha/yr<br>         <b>Tree Density:</b> 500.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 1.17 Mg/ha/yr<br>         <b>BLG:</b> 0.28 Mg/ha/yr<br>         <b>Tree Density:</b> 660.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 1.2 Mg/ha/yr<br>         <b>BLG:</b> 0.29 Mg/ha/yr<br>         <b>Tree Density:</b> 800.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 1.8 Mg/ha/yr<br>         <b>BLG:</b> 0.43 Mg/ha/yr<br>         <b>Tree Density:</b> 480.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 1.92 Mg/ha/yr<br>         <b>BLG:</b> 0.46 Mg/ha/yr<br>         <b>Tree Density:</b> 1180.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 2.68 Mg/ha/yr<br>         <b>BLG:</b> 0.64 Mg/ha/yr<br>         <b>Tree Density:</b> 740.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 2.08 Mg/ha/yr<br>         <b>BLG:</b> 0.5 Mg/ha/yr<br>         <b>Tree Density:</b> 680.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 1.88 Mg/ha/yr<br>         <b>BLG:</b> 0.45 Mg/ha/yr<br>         <b>Tree Density:</b> 300.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 14.0 yrs<br>         <b>ABG:</b> 4.66 Mg/ha/yr<br>         <b>BLG:</b> 1.12 Mg/ha/yr<br>         <b>Tree Density:</b> 700.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 17.0 yrs<br>         <b>ABG:</b> 1.01 Mg/ha/yr<br>         <b>BLG:</b> 0.24 Mg/ha/yr<br>         <b>Tree Density:</b> 540.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 1.66 Mg/ha/yr<br>         <b>BLG:</b> 0.4 Mg/ha/yr<br>         <b>Tree Density:</b> 540.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 3.49 Mg/ha/yr<br>         <b>BLG:</b> 0.84 Mg/ha/yr<br>         <b>Tree Density:</b> 720.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 6.46 Mg/ha/yr<br>         <b>BLG:</b> 1.55 Mg/ha/yr<br>         <b>Tree Density:</b> 960.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 4.68 Mg/ha/yr<br>         <b>BLG:</b> 1.12 Mg/ha/yr<br>         <b>Tree Density:</b> 380.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 3.56 Mg/ha/yr<br>         <b>BLG:</b> 0.85 Mg/ha/yr<br>         <b>Tree Density:</b> 340.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 4.14 Mg/ha/yr<br>         <b>BLG:</b> 0.99 Mg/ha/yr<br>         <b>Tree Density:</b> 920.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 1.48 Mg/ha/yr<br>         <b>BLG:</b> 0.36 Mg/ha/yr<br>         <b>Tree Density:</b> 400.0 /ha<br>         <hr>         </div>`)[0];
+                popup_64564b2ccab2d6287e3a5345be2b4a05.setContent(html_bd758b65881f9dd1e64a907502daaa74);
+            
+        
+
+        marker_2a256b89c6dfddb84a7184c2dfcaf90f.bindPopup(popup_64564b2ccab2d6287e3a5345be2b4a05)
+        ;
+
+        
+    
+    
+            marker_2a256b89c6dfddb84a7184c2dfcaf90f.bindTooltip(
+                `<div>
+                     Roshetko et al., (2002), Indonesia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fa2e230a85e09af2c6c88059f25e6255 = L.marker(
+                [15.5855545, -90.345759],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_ac37ca87263590b5ff2bdc017eaac656 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2c7524cb7b24a8cea3170bd6ce1e76ca = $(`<div id="html_2c7524cb7b24a8cea3170bd6ce1e76ca" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Schmitt-Harsh et al., (2012)<br><b>Location:</b> Guatemala<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 40.0 yrs<br>         <b>ABG:</b> 1.83 Mg/ha/yr<br>         <b>BLG:</b> 0.41 Mg/ha/yr<br>         <b>Tree Density:</b> 218.0 /ha<br>         <hr>         </div>`)[0];
+                popup_ac37ca87263590b5ff2bdc017eaac656.setContent(html_2c7524cb7b24a8cea3170bd6ce1e76ca);
+            
+        
+
+        marker_fa2e230a85e09af2c6c88059f25e6255.bindPopup(popup_ac37ca87263590b5ff2bdc017eaac656)
+        ;
+
+        
+    
+    
+            marker_fa2e230a85e09af2c6c88059f25e6255.bindTooltip(
+                `<div>
+                     Schmitt-Harsh et al., (2012), Guatemala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3b9de5d1c4feec80d4688a33694c4fac = L.marker(
+                [-10.3333333, -53.2],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_0832b3e1c7a40d661b1bc669b20bc105 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6ff5c527d903cabc7c512a64a83976d0 = $(`<div id="html_6ff5c527d903cabc7c512a64a83976d0" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Schroth et al., (2002)<br><b>Location:</b> Brazil<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.17 Mg/ha/yr<br>         <b>BLG:</b> 0.66 Mg/ha/yr<br>         <b>Tree Density:</b> 578.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.49 Mg/ha/yr<br>         <b>BLG:</b> 0.79 Mg/ha/yr<br>         <b>Tree Density:</b> 578.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.22 Mg/ha/yr<br>         <b>BLG:</b> 0.64 Mg/ha/yr<br>         <b>Tree Density:</b> 577.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 2.85 Mg/ha/yr<br>         <b>BLG:</b> 0.8 Mg/ha/yr<br>         <b>Tree Density:</b> 577.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 0.88 Mg/ha/yr<br>         <b>BLG:</b> 0.28 Mg/ha/yr<br>         <b>Tree Density:</b> 270.0 /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 1.24 Mg/ha/yr<br>         <b>BLG:</b> 0.37 Mg/ha/yr<br>         <b>Tree Density:</b> 270.0 /ha<br>         <hr>         </div>`)[0];
+                popup_0832b3e1c7a40d661b1bc669b20bc105.setContent(html_6ff5c527d903cabc7c512a64a83976d0);
+            
+        
+
+        marker_3b9de5d1c4feec80d4688a33694c4fac.bindPopup(popup_0832b3e1c7a40d661b1bc669b20bc105)
+        ;
+
+        
+    
+    
+            marker_3b9de5d1c4feec80d4688a33694c4fac.bindTooltip(
+                `<div>
+                     Schroth et al., (2002), Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_4b77a9086493b9d9ff4efc30347fe05d = L.marker(
+                [43.9792797, -120.737257],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_f587d251ebaef2f78ed5d3e3b9e1ff76 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_abbd4127373f74a2cca032f67f70c75e = $(`<div id="html_abbd4127373f74a2cca032f67f70c75e" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Sharrow and Ismail (2004)<br><b>Location:</b> Oregon<br><br>         <b>AFS:</b> Silvopasture<br>         <b>Age:</b> 11.0 yrs<br>         <b>ABG:</b> 0.97 Mg/ha/yr<br>         <b>BLG:</b> 0.11 Mg/ha/yr<br>         <b>Tree Density:</b> 571.0 /ha<br>         <hr>         </div>`)[0];
+                popup_f587d251ebaef2f78ed5d3e3b9e1ff76.setContent(html_abbd4127373f74a2cca032f67f70c75e);
+            
+        
+
+        marker_4b77a9086493b9d9ff4efc30347fe05d.bindPopup(popup_f587d251ebaef2f78ed5d3e3b9e1ff76)
+        ;
+
+        
+    
+    
+            marker_4b77a9086493b9d9ff4efc30347fe05d.bindTooltip(
+                `<div>
+                     Sharrow and Ismail (2004), Oregon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0defa215810487e3805e14a20b8547e6 = L.marker(
+                [10.2735633, -84.0739102],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_4509097e366ec6dc6edbb4e61b3f5fc1 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c5450022bdda1f4f45dfbd24bbf39cfc = $(`<div id="html_c5450022bdda1f4f45dfbd24bbf39cfc" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Siles et al., (2010)<br><b>Location:</b> Costa Rica<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 3.24 Mg/ha/yr<br>         <b>BLG:</b> 0.78 Mg/ha/yr<br>         <b>Tree Density:</b> 278.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 2.55 Mg/ha/yr<br>         <b>BLG:</b> 0.28 Mg/ha/yr<br>         <b>Tree Density:</b> 278.0 /ha<br>         <hr>         </div>`)[0];
+                popup_4509097e366ec6dc6edbb4e61b3f5fc1.setContent(html_c5450022bdda1f4f45dfbd24bbf39cfc);
+            
+        
+
+        marker_0defa215810487e3805e14a20b8547e6.bindPopup(popup_4509097e366ec6dc6edbb4e61b3f5fc1)
+        ;
+
+        
+    
+    
+            marker_0defa215810487e3805e14a20b8547e6.bindTooltip(
+                `<div>
+                     Siles et al., (2010), Costa Rica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_c98bb0e278d281490598eeb14dde19b8 = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_2993cde592cd9f93fee3380dfbdbbe7a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8dadd94d30d7eb5c931584d26b9fbeda = $(`<div id="html_8dadd94d30d7eb5c931584d26b9fbeda" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Singh and Gill (2014)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 3.59 Mg/ha/yr<br>         <b>BLG:</b> 0.81 Mg/ha/yr<br>         <b>Tree Density:</b> 500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 3.86 Mg/ha/yr<br>         <b>BLG:</b> 1.59 Mg/ha/yr<br>         <b>Tree Density:</b> 500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 8.17 Mg/ha/yr<br>         <b>BLG:</b> 1.8 Mg/ha/yr<br>         <b>Tree Density:</b> 500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 9.71 Mg/ha/yr<br>         <b>BLG:</b> 2.41 Mg/ha/yr<br>         <b>Tree Density:</b> 500.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 7.0 yrs<br>         <b>ABG:</b> 8.29 Mg/ha/yr<br>         <b>BLG:</b> 2.26 Mg/ha/yr<br>         <b>Tree Density:</b> 500.0 /ha<br>         <hr>         </div>`)[0];
+                popup_2993cde592cd9f93fee3380dfbdbbe7a.setContent(html_8dadd94d30d7eb5c931584d26b9fbeda);
+            
+        
+
+        marker_c98bb0e278d281490598eeb14dde19b8.bindPopup(popup_2993cde592cd9f93fee3380dfbdbbe7a)
+        ;
+
+        
+    
+    
+            marker_c98bb0e278d281490598eeb14dde19b8.bindTooltip(
+                `<div>
+                     Singh and Gill (2014), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f7455431dd194a5bf51efba720c5957e = L.marker(
+                [-2.4833826, 117.8902853],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_6d0ed053ceeacdea196cf5093e8341a0 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_bb671765d1ed0c94e334caba59433b5b = $(`<div id="html_bb671765d1ed0c94e334caba59433b5b" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Smiley and Kroschel (2008)<br><b>Location:</b> Indonesia<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 2.45 Mg/ha/yr<br>         <b>BLG:</b> 0.59 Mg/ha/yr<br>         <b>Tree Density:</b> 370.0 /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 1.69 Mg/ha/yr<br>         <b>BLG:</b> 0.41 Mg/ha/yr<br>         <b>Tree Density:</b> 370.0 /ha<br>         <hr>         </div>`)[0];
+                popup_6d0ed053ceeacdea196cf5093e8341a0.setContent(html_bb671765d1ed0c94e334caba59433b5b);
+            
+        
+
+        marker_f7455431dd194a5bf51efba720c5957e.bindPopup(popup_6d0ed053ceeacdea196cf5093e8341a0)
+        ;
+
+        
+    
+    
+            marker_f7455431dd194a5bf51efba720c5957e.bindTooltip(
+                `<div>
+                     Smiley and Kroschel (2008), Indonesia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_d040159d125a891de15df5fb26114768 = L.marker(
+                [-10.3333333, -53.2],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_afa4288c5570773acb8859f4482fed9f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_17d0ca433a13226e46bc0f443f334647 = $(`<div id="html_17d0ca433a13226e46bc0f443f334647" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Brazil<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 30.0 yrs<br>         <b>ABG:</b> 1.07 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 30.0 yrs<br>         <b>ABG:</b> 1.1 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 34.0 yrs<br>         <b>ABG:</b> 2.41 Mg/ha/yr<br>         <b>BLG:</b> 0.58 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_afa4288c5570773acb8859f4482fed9f.setContent(html_17d0ca433a13226e46bc0f443f334647);
+            
+        
+
+        marker_d040159d125a891de15df5fb26114768.bindPopup(popup_afa4288c5570773acb8859f4482fed9f)
+        ;
+
+        
+    
+    
+            marker_d040159d125a891de15df5fb26114768.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Brazil
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_da1bd94c98e6cf963a6f4420af244e08 = L.marker(
+                [4.6125522, 13.1535811],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_7490330934a6966261141d5960e715d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b92ead5903e398ade71cf30c11cfbd78 = $(`<div id="html_b92ead5903e398ade71cf30c11cfbd78" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Cameroon<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 40.0 yrs<br>         <b>ABG:</b> 2.23 Mg/ha/yr<br>         <b>BLG:</b> 0.53 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_7490330934a6966261141d5960e715d5.setContent(html_b92ead5903e398ade71cf30c11cfbd78);
+            
+        
+
+        marker_da1bd94c98e6cf963a6f4420af244e08.bindPopup(popup_7490330934a6966261141d5960e715d5)
+        ;
+
+        
+    
+    
+            marker_da1bd94c98e6cf963a6f4420af244e08.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Cameroon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_89ffe3f3e5e7020cb2e0dfcf21b694dd = L.marker(
+                [4.099917, -72.9088133],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_998aeb36c2a57739604980040375ca26 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8d6ba3a0c0dfed3621f98e7c28e29efc = $(`<div id="html_8d6ba3a0c0dfed3621f98e7c28e29efc" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Columbia<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 13.0 yrs<br>         <b>ABG:</b> 3.77 Mg/ha/yr<br>         <b>BLG:</b> 0.9 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_998aeb36c2a57739604980040375ca26.setContent(html_8d6ba3a0c0dfed3621f98e7c28e29efc);
+            
+        
+
+        marker_89ffe3f3e5e7020cb2e0dfcf21b694dd.bindPopup(popup_998aeb36c2a57739604980040375ca26)
+        ;
+
+        
+    
+    
+            marker_89ffe3f3e5e7020cb2e0dfcf21b694dd.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Columbia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a90601020bcd36d1a0fe32a59a72599b = L.marker(
+                [10.2735633, -84.0739102],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_9b47419a606d74f5254faa57e4c8ba0e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ad1e5813f328fbec90acbce725adc59b = $(`<div id="html_ad1e5813f328fbec90acbce725adc59b" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Costa Rica<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 10.0 yrs<br>         <b>ABG:</b> 6.0 Mg/ha/yr<br>         <b>BLG:</b> 1.44 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_9b47419a606d74f5254faa57e4c8ba0e.setContent(html_ad1e5813f328fbec90acbce725adc59b);
+            
+        
+
+        marker_a90601020bcd36d1a0fe32a59a72599b.bindPopup(popup_9b47419a606d74f5254faa57e4c8ba0e)
+        ;
+
+        
+    
+    
+            marker_a90601020bcd36d1a0fe32a59a72599b.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Costa Rica
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_46a8773543a9083c730b7476b636f841 = L.marker(
+                [8.0300284, -1.0800271],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_1082e75b03f2a4414aa4a9cfec368ba4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_502e6bec16eced07a7739693f9b3335d = $(`<div id="html_502e6bec16eced07a7739693f9b3335d" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Ghana<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 2.25 Mg/ha/yr<br>         <b>BLG:</b> 0.54 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 2.38 Mg/ha/yr<br>         <b>BLG:</b> 0.57 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 1.75 Mg/ha/yr<br>         <b>BLG:</b> 0.42 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_1082e75b03f2a4414aa4a9cfec368ba4.setContent(html_502e6bec16eced07a7739693f9b3335d);
+            
+        
+
+        marker_46a8773543a9083c730b7476b636f841.bindPopup(popup_1082e75b03f2a4414aa4a9cfec368ba4)
+        ;
+
+        
+    
+    
+            marker_46a8773543a9083c730b7476b636f841.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Ghana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a6d7052d394bd5aca76c38364be4e2ae = L.marker(
+                [8.559559, -81.1308434],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_89c288bf18e636a0f87a9ef7b9c4e066 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_779a430d949c56b4e15b760a34fbb3df = $(`<div id="html_779a430d949c56b4e15b760a34fbb3df" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Panama<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 2.48 Mg/ha/yr<br>         <b>BLG:</b> 0.6 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_89c288bf18e636a0f87a9ef7b9c4e066.setContent(html_779a430d949c56b4e15b760a34fbb3df);
+            
+        
+
+        marker_a6d7052d394bd5aca76c38364be4e2ae.bindPopup(popup_89c288bf18e636a0f87a9ef7b9c4e066)
+        ;
+
+        
+    
+    
+            marker_a6d7052d394bd5aca76c38364be4e2ae.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Panama
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_ee1c0a1af465fcbf92327e2b7660a387 = L.marker(
+                [-6.8699697, -75.0458515],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_91a8627c6ad2008884578adb96d54840 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_db305ec8cb5bf8a8f77b493b0ca8fc0c = $(`<div id="html_db305ec8cb5bf8a8f77b493b0ca8fc0c" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Somarriba et al., (2013)<br><b>Location:</b> Peru<br><br>         <b>AFS:</b> Multistrata<br>         <b>Age:</b> 20.0 yrs<br>         <b>ABG:</b> 1.5 Mg/ha/yr<br>         <b>BLG:</b> 0.36 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 12.0 yrs<br>         <b>ABG:</b> 2.83 Mg/ha/yr<br>         <b>BLG:</b> 0.68 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Multistrata<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 2.6 Mg/ha/yr<br>         <b>BLG:</b> 0.62 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_91a8627c6ad2008884578adb96d54840.setContent(html_db305ec8cb5bf8a8f77b493b0ca8fc0c);
+            
+        
+
+        marker_ee1c0a1af465fcbf92327e2b7660a387.bindPopup(popup_91a8627c6ad2008884578adb96d54840)
+        ;
+
+        
+    
+    
+            marker_ee1c0a1af465fcbf92327e2b7660a387.bindTooltip(
+                `<div>
+                     Somarriba et al., (2013), Peru
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0996114bcf3157fadc0d3446c47e5b9e = L.marker(
+                [22.3511148, 78.6677428],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_690140c4bf68b19cab4a00fb34312e1b = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_98829e5157e252c9935fa1f0d3083742 = $(`<div id="html_98829e5157e252c9935fa1f0d3083742" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Swamy and Puri (2005)<br><b>Location:</b> India<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 5.0 yrs<br>         <b>ABG:</b> 1.0 Mg/ha/yr<br>         <b>BLG:</b> 0.26 Mg/ha/yr<br>         <b>Tree Density:</b> 606.0 /ha<br>         <hr>         </div>`)[0];
+                popup_690140c4bf68b19cab4a00fb34312e1b.setContent(html_98829e5157e252c9935fa1f0d3083742);
+            
+        
+
+        marker_0996114bcf3157fadc0d3446c47e5b9e.bindPopup(popup_690140c4bf68b19cab4a00fb34312e1b)
+        ;
+
+        
+    
+    
+            marker_0996114bcf3157fadc0d3446c47e5b9e.bindTooltip(
+                `<div>
+                     Swamy and Puri (2005), India
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5f92bbba88d544dfe8cb85d0d6bcd285 = L.marker(
+                [16.3700359, -2.2900239],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_c71277840964bc22c75296bde2e0afa7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_087a5f0b2ebb8c9e3fb996e606bb71de = $(`<div id="html_087a5f0b2ebb8c9e3fb996e606bb71de" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Takimoto et al., (2008)<br><b>Location:</b> Mali<br><br>         <b>AFS:</b> Parkland<br>         <b>Age:</b> 35.0 yrs<br>         <b>ABG:</b> 1.54 Mg/ha/yr<br>         <b>BLG:</b> 0.37 Mg/ha/yr<br>         <b>Tree Density:</b> 35.0 /ha<br>         <hr>                  <b>AFS:</b> Parkland<br>         <b>Age:</b> 35.0 yrs<br>         <b>ABG:</b> 0.64 Mg/ha/yr<br>         <b>BLG:</b> 0.15 Mg/ha/yr<br>         <b>Tree Density:</b> 35.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 0.61 Mg/ha/yr<br>         <b>BLG:</b> 0.15 Mg/ha/yr<br>         <b>Tree Density:</b> 1333.0 /ha<br>         <hr>                  <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 8.0 yrs<br>         <b>ABG:</b> 0.36 Mg/ha/yr<br>         <b>BLG:</b> 0.09 Mg/ha/yr<br>         <b>Tree Density:</b> 2000.0 /ha<br>         <hr>         </div>`)[0];
+                popup_c71277840964bc22c75296bde2e0afa7.setContent(html_087a5f0b2ebb8c9e3fb996e606bb71de);
+            
+        
+
+        marker_5f92bbba88d544dfe8cb85d0d6bcd285.bindPopup(popup_c71277840964bc22c75296bde2e0afa7)
+        ;
+
+        
+    
+    
+            marker_5f92bbba88d544dfe8cb85d0d6bcd285.bindTooltip(
+                `<div>
+                     Takimoto et al., (2008), Mali
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_51d352553f8af013a2613f117c020f2b = L.marker(
+                [23.6585116, -102.0077097],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_a3f53adaddf5dae386240df1c0fd43c7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f95da75752577ebfcaee6c2a474f7619 = $(`<div id="html_f95da75752577ebfcaee6c2a474f7619" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Villanueva-Lopez et al., (2015)<br><b>Location:</b> Mexico<br><br>         <b>AFS:</b> Hedgerow<br>         <b>Age:</b> 15.0 yrs<br>         <b>ABG:</b> 0.43 Mg/ha/yr<br>         <b>BLG:</b> 0.1 Mg/ha/yr<br>         <b>Tree Density:</b> 1110.0 /ha<br>         <hr>         </div>`)[0];
+                popup_a3f53adaddf5dae386240df1c0fd43c7.setContent(html_f95da75752577ebfcaee6c2a474f7619);
+            
+        
+
+        marker_51d352553f8af013a2613f117c020f2b.bindPopup(popup_a3f53adaddf5dae386240df1c0fd43c7)
+        ;
+
+        
+    
+    
+            marker_51d352553f8af013a2613f117c020f2b.bindTooltip(
+                `<div>
+                     Villanueva-Lopez et al., (2015), Mexico
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_f1d3c8601fbb850b18cf7373cd4484d1 = L.marker(
+                [8.0300284, -1.0800271],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_742e60224061f0e7c78046351d2c7bfd = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5b751bbf830d1ac0057a65a3ed4381a8 = $(`<div id="html_5b751bbf830d1ac0057a65a3ed4381a8" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Wade et al., (2010)<br><b>Location:</b> Ghana<br><br>         <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 50.0 yrs<br>         <b>ABG:</b> 2.11 Mg/ha/yr<br>         <b>BLG:</b> 0.51 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>                  <b>AFS:</b> Shaded perennial<br>         <b>Age:</b> 50.0 yrs<br>         <b>ABG:</b> 0.63 Mg/ha/yr<br>         <b>BLG:</b> 0.15 Mg/ha/yr<br>         <b>Tree Density:</b> nan /ha<br>         <hr>         </div>`)[0];
+                popup_742e60224061f0e7c78046351d2c7bfd.setContent(html_5b751bbf830d1ac0057a65a3ed4381a8);
+            
+        
+
+        marker_f1d3c8601fbb850b18cf7373cd4484d1.bindPopup(popup_742e60224061f0e7c78046351d2c7bfd)
+        ;
+
+        
+    
+    
+            marker_f1d3c8601fbb850b18cf7373cd4484d1.bindTooltip(
+                `<div>
+                     Wade et al., (2010), Ghana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_304776bdd7136db0e4794339192a12d1 = L.marker(
+                [50.000678, -86.000977],
+                {
+}
+            ).addTo(marker_cluster_dbd3b6b86729511a69f6470a68fc8de3);
+        
+    
+        var popup_b5c19862e84561c7d60de496b2e6ca03 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_135df1b43840ee414fac0f16f5bdb23e = $(`<div id="html_135df1b43840ee414fac0f16f5bdb23e" style="width: 100.0%; height: 100.0%;"><b>Study:</b> Wotherspoon et al., (2014)<br><b>Location:</b> Ontario<br><br>         <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.86 Mg/ha/yr<br>         <b>BLG:</b> 0.22 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.51 Mg/ha/yr<br>         <b>BLG:</b> 0.13 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.48 Mg/ha/yr<br>         <b>BLG:</b> 0.12 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.41 Mg/ha/yr<br>         <b>BLG:</b> 0.11 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>                  <b>AFS:</b> Silvoarable<br>         <b>Age:</b> 25.0 yrs<br>         <b>ABG:</b> 0.51 Mg/ha/yr<br>         <b>BLG:</b> 0.13 Mg/ha/yr<br>         <b>Tree Density:</b> 111.0 /ha<br>         <hr>         </div>`)[0];
+                popup_b5c19862e84561c7d60de496b2e6ca03.setContent(html_135df1b43840ee414fac0f16f5bdb23e);
+            
+        
+
+        marker_304776bdd7136db0e4794339192a12d1.bindPopup(popup_b5c19862e84561c7d60de496b2e6ca03)
+        ;
+
+        
+    
+    
+            marker_304776bdd7136db0e4794339192a12d1.bindTooltip(
+                `<div>
+                     Wotherspoon et al., (2014), Ontario
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            marker_cluster_dbd3b6b86729511a69f6470a68fc8de3.addTo(map_90fd5516358798fff5d26466ff41331f);
+        
+</script>
+</html>
